@@ -1006,13 +1006,6 @@ html.has-custom-cursor select {
   line-height: 1.45;
   margin-top: 3px;
 }
-.mega-link__price {
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  color: var(--accent);
-  padding-top: 3px;
-  white-space: nowrap;
-}
 
 .mega-footer {
   grid-column: 1 / -1;

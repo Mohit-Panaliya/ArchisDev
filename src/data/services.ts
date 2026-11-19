@@ -555,7 +555,7 @@ export const getService = (slug: string) => services.find((service) => service.s
 export const homeFaqs: Faq[] = [
   {
     q: "How do the starting prices actually work?",
-    a: "Each starting price is a real scope, not a bait price: a landing page at ₹4,999 includes one designed page, core sections, motion, a lead form and launch. If your scope is larger we send a written quote before any work starts, itemised by pages, modules and integrations.",
+    a: "Each starting price is a real scope, not a bait price: the base scope for a landing page includes one designed page, core sections, motion, a lead form and launch. Every starting price is listed on the pricing page. If your scope is larger we send a written quote before any work starts, itemised by pages, modules and integrations.",
   },
   {
     q: "How soon can we start?",

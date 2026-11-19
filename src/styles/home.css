@@ -129,7 +129,7 @@
 
 .hero__meta {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   margin-top: clamp(36px, 5vh, 58px);
   padding-top: 22px;
@@ -526,42 +526,6 @@
   max-width: 46ch;
 }
 
-.service-card__foot {
-  position: relative;
-  z-index: 2;
-  margin-top: 24px;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.service-card__price {
-  display: flex;
-  align-items: baseline;
-  gap: 7px;
-}
-.service-card__price small {
-  font-family: var(--font-mono);
-  font-size: 0.55rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--faint);
-}
-.service-card__price b {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-}
-.service-card:hover .service-card__price b {
-  color: var(--accent);
-}
-
 .service-card__modules {
   display: flex;
   flex-wrap: wrap;
@@ -683,41 +647,6 @@
   height: 13px;
   color: var(--accent);
   flex: none;
-  margin-top: 2px;
-}
-
-.erp-price {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 18px;
-  margin-top: 6px;
-  padding: 16px 18px;
-  border: 1px solid var(--line-strong);
-  border-radius: 16px;
-  background: rgba(201, 242, 77, 0.04);
-  width: 100%;
-}
-.erp-price__label {
-  font-family: var(--font-mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.erp-price__value {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  color: var(--accent);
-}
-.erp-price small {
-  font-family: var(--font-mono);
-  font-size: 0.55rem;
-  letter-spacing: 0.08em;
-  color: var(--faint);
-  display: block;
   margin-top: 2px;
 }
 
@@ -2047,9 +1976,6 @@
     grid-template-columns: 1fr 1fr;
     gap: 14px;
   }
-  .hero__meta > div:last-child {
-    grid-column: 1 / -1;
-  }
   .hero__chip {
     font-size: 0.5rem;
     padding: 6px 10px;
@@ -2065,10 +1991,6 @@
   }
   .mock {
     min-height: 220px;
-  }
-  .service-card__foot {
-    align-items: flex-start;
-    flex-direction: column;
   }
   .work-grid {
     gap: 28px;

@@ -169,10 +169,6 @@ export default function Home() {
                 <dt>Based in</dt>
                 <dd>Anand, India — remote worldwide</dd>
               </div>
-              <div>
-                <dt>Engagements from</dt>
-                <dd>₹4,999 to enterprise ERP</dd>
-              </div>
             </dl>
           </div>
 
@@ -316,13 +312,6 @@ export default function Home() {
                     </div>
                   )}
 
-                  <div className="service-card__foot">
-                    <span className="service-card__price">
-                      <small>{service.priceLabel}</small>
-                      <b>{service.priceAmount}</b>
-                    </span>
-                    <span className="tag">{service.timeline}</span>
-                  </div>
                 </TiltCard>
               );
             })}
@@ -363,14 +352,6 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-
-                  <div className="erp-price">
-                    <div>
-                      <span className="erp-price__label">Implementation from</span>
-                      <div className="erp-price__value">₹39,999</div>
-                      <small>ERPNext or Odoo · scoped after discovery</small>
-                    </div>
-                  </div>
 
                   <div className="erp-panel__actions">
                     <Magnetic>

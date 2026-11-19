@@ -87,7 +87,6 @@ export function Navbar() {
                     <span className="mega-link__name">{service.name}</span>
                     <span className="mega-link__desc">{service.tags.join(" · ")}</span>
                   </span>
-                  <span className="mega-link__price">{service.priceAmount}</span>
                 </Link>
               ))}
               <div className="mega-footer">
@@ -160,7 +159,6 @@ export function Navbar() {
                   onClick={() => setMenuOpen(false)}
                 >
                   {service.name}
-                  <span>{service.priceAmount}</span>
                 </Link>
               ))}
             </div>
