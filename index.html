@@ -9,7 +9,26 @@
       content="ArchisDev designs and engineers websites, e-commerce, mobile apps, ERPNext &amp; Odoo implementations and custom software. Transparent starting prices from ₹4,999."
     />
     <meta name="theme-color" content="#070907" />
-    <meta name="color-scheme" content="dark" />
+    <meta name="color-scheme" content="dark light" />
+    <script>
+      (function () {
+        var theme = "dark";
+        try {
+          var stored = localStorage.getItem("archisdev:theme");
+          if (stored === "light" || stored === "dark") {
+            theme = stored;
+          } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+            theme = "light";
+          }
+        } catch (error) {
+          /* storage unavailable */
+        }
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute("content", theme === "light" ? "#f4f5ee" : "#070907");
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href="https://mohit-panaliya.github.io/ArchisDev/" />
 

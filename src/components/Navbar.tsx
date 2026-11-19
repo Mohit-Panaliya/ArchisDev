@@ -8,6 +8,7 @@ import { site } from "../data/site";
 import { Brand } from "./Logo";
 import { Icon } from "./Icon";
 import { Magnetic } from "./Magnetic";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -31,6 +32,7 @@ export function Navbar() {
     stopScroll();
 
     const menu = menuRef.current;
+    menu?.querySelector(".mobile-menu__nav")?.scrollTo({ top: 0 });
     if (menu && !prefersReducedMotion()) {
       gsap.fromTo(
         menu.querySelectorAll("[data-menu-item]"),
@@ -111,6 +113,7 @@ export function Navbar() {
         </nav>
 
         <div className="header-actions">
+          <ThemeToggle />
           <Magnetic>
             <Link to="/contact" className="btn btn--primary btn--sm">
               Start a project <Icon name="arrowUpRight" />
@@ -137,7 +140,7 @@ export function Navbar() {
         aria-hidden={!menuOpen}
       >
         <div className="wrap mobile-menu__inner">
-          <nav aria-label="Mobile navigation">
+          <nav className="mobile-menu__nav" aria-label="Mobile navigation">
             <NavLink to="/" end className="mobile-menu__link" data-menu-item onClick={() => setMenuOpen(false)}>
               Home <span>01</span>
             </NavLink>
@@ -176,8 +179,18 @@ export function Navbar() {
               ))}
           </nav>
           <div className="mobile-menu__foot">
-            <a href={`mailto:${site.email}`}>{site.email}</a>
-            <span className="footer-status">{site.availability}</span>
+            <Link
+              to="/contact"
+              className="btn btn--primary mobile-menu__cta"
+              data-menu-item
+              onClick={() => setMenuOpen(false)}
+            >
+              Start a project <Icon name="arrowUpRight" />
+            </Link>
+            <div className="mobile-menu__meta">
+              <a href={`mailto:${site.email}`}>{site.email}</a>
+              <span className="footer-status">{site.availability}</span>
+            </div>
           </div>
         </div>
       </div>

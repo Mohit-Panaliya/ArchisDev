@@ -1,7 +1,7 @@
 # ArchisDev — website
 
 Multipage marketing site for ArchisDev, built from scratch with React, Vite, GSAP and a
-Three.js hero. Dark, typographic, motion-led, and fully responsive.
+Three.js hero. Dark and light themes, typographic, motion-led, and fully responsive.
 
 ## Stack
 
@@ -39,6 +39,22 @@ Most copy and pricing lives in `src/data/`:
 
 Page-level copy sits in the matching file under `src/pages/`. Shared design tokens
 (colours, type, spacing, radii) are at the top of `src/styles/base.css`.
+
+## Themes
+
+The site ships dark by default and supports a light theme via the toggle in the
+header.
+
+- Tokens live in `:root` (dark) and `[data-theme="light"]` in `src/styles/base.css`.
+  Use `--accent` for text/strokes and `--accent-fill` for solid lime surfaces
+  (buttons, chips) so both themes stay readable.
+- `src/lib/theme.ts` owns the toggle, persistence and React store. The choice is
+  saved to `localStorage["archisdev:theme"]`; first-time visitors follow the OS
+  `prefers-color-scheme`.
+- An inline script in `index.html` applies the stored theme before first paint, so
+  there is no flash of the wrong theme.
+- Work mockups stay dark in both themes (like product screenshots); that override
+  is the `[data-theme="light"] .mock` block in `src/styles/home.css`.
 
 ## Contact form
 

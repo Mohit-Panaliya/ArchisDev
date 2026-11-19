@@ -20,7 +20,9 @@ export type IconName =
   | "shield"
   | "chart"
   | "layers"
-  | "link";
+  | "link"
+  | "sun"
+  | "moon";
 
 type Props = SVGProps<SVGSVGElement> & {
   name: IconName;
@@ -132,6 +134,13 @@ const paths: Record<IconName, ReactNode> = {
       <path d="M14 10.5a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1.2-1.2" />
     </>
   ),
+  sun: (
+    <>
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2.5v2M12 19.5v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2.5 12h2M19.5 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+    </>
+  ),
+  moon: <path d="M20.5 14.8A8.5 8.5 0 0 1 9.2 3.5a8.5 8.5 0 1 0 11.3 11.3Z" />,
 };
 
 export function Icon({ name, size = 18, strokeWidth = 1.6, ...rest }: Props) {

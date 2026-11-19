@@ -89,7 +89,7 @@ export function Footer() {
               <div>
                 <span className="footer-contact__label">GitHub</span>
                 <a href={site.github} target="_blank" rel="noreferrer">
-                  @Mohit-Panaliya
+                  @Mohit-P
                 </a>
               </div>
             </div>

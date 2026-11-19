@@ -22,14 +22,14 @@ export const site = {
 
 export const founders = [
   {
-    name: "Mohit Panaliya",
+    name: "Mohit P",
     role: "Co-founder",
     monogram: "MP",
     bio: "Co-leads ArchisDev with a focus on ERP and delivery. Years of hands-on experience implementing business systems and shipping the modules teams live inside — CRM, sales, purchase, inventory, accounts and beyond.",
     focus: ["ERPNext", "Odoo", "CRM", "Implementation"],
   },
   {
-    name: "Imran Ansari",
+    name: "Imran A",
     role: "Co-founder",
     monogram: "IA",
     bio: "Co-leads ArchisDev on the engineering side. Builds the systems behind the systems — applications, integrations and custom modules — with a bias for clean architecture and interfaces that feel effortless.",
